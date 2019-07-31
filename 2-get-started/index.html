@@ -1,0 +1,25 @@
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<script src="https://unpkg.com/d3@5.9.7/dist/d3.min.js"></script>
+<script>
+  // const ps = document.querySelectorAll('p')
+  // ps.forEach((it, index) => {
+  //   const order = index + 1
+  //   it.innerText = order
+  //   if (order % 2 === 0) {
+  //     it.style.color = 'tomato'
+  //   }
+  // })
+</script>
+<script>
+  d3.selectAll('p')
+    .text((data, index) => index + 1)
+    .style('color', (data, index) => {
+      const order = index + 1
+      if (!(order % 2)) {
+        return 'tomato'
+      }
+    })
+</script>
