@@ -1,0 +1,20 @@
+<div class="parent">
+  <p>a</p>
+  <p>b</p>
+  <p>c</p>
+</div>
+<script src="https://unpkg.com/d3@5.9.7/dist/d3.min.js"></script>
+<script>
+  const ps = d3.selectAll('p')
+  ps.style('background', 'royalblue')
+  ps.each(function (data, index) {
+    this.style.background = 'tomato'
+  })
+
+  const native_ps = document.querySelectorAll('p')
+  const ps2 = d3.selectAll(native_ps)
+  console.log(ps2.nodes())
+
+  const ps3 = d3.select('.parent').selectAll('p')
+  console.log(ps3.nodes())
+</script>
