@@ -1,0 +1,22 @@
+<div class="parent">
+  <p>a</p>
+  <p>b</p>
+</div>
+<script src="https://unpkg.com/d3@5.9.7/dist/d3.min.js"></script>
+<script>
+  const a1 = d3.select('p')
+  console.log(a1.nodes())
+
+  const a2 = d3.select('.parent p')
+  console.log(a2.nodes())
+
+  const a3 = d3.select('.parent')
+    .style('border', 'solid')
+    .select('p')
+    .style('border', 'solid tomato')
+  console.log(a3.nodes())
+
+  const p = document.querySelector('p')
+  const a4 = d3.select(p)
+  console.log(a4.nodes())
+</script>
